@@ -28,6 +28,8 @@ class Book(models.Model):
     title = models.CharField('Title',max_length=120)
     image = models.ImageField('Image',upload_to = 'media/category_images')
     description = models.TextField('Description')
+    price = models.DecimalField('Price',max_digits=7,decimal_places=2)
+    page_count = models.IntegerField('Pages')
 
     #moderations
     is_published = models.BooleanField('is published', default=True)
