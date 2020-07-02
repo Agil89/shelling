@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border='1'>all_objects
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>author</th>
+            <th>Category</th>
+            <th>price</th>
+            <th>page_count</th>
+        </tr>
+        {% for book in information %}
+        <tr>
+            <th>{{book.id}}</th>
+            <th>{{book.title}}</th>
+            <th>{{book.author.fullname}}</th>
+            <th>{{book.categories}}</th>
+            <th>{{book.price}}</th>
+            <th>{{book.page_count}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+    <table border='1'>cheaper_books
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>author</th>
+            <th>Category</th>
+            <th>price</th>
+            <th>page_count</th>
+        </tr>
+        {% for book in cheaper_books %}
+        <tr>
+            <th>{{book.id}}</th>
+            <th>{{book.title}}</th>
+            <th>{{book.author.fullname}}</th>
+            <th>{{book.categories}}</th>
+            <th>{{book.price}}</th>
+            <th>{{book.page_count}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+    <table border='1'>twentys_authors
+        <tr>
+            <th>id</th>
+            <th>Fullname</th>
+            <th>gender</th>
+            <th>date_of_birth</th>
+            <th>nationality</th>
+            <th>info</th>
+        </tr>
+        {% for author in twentys_authors %}
+        <tr>
+            <th>{{author.id}}</th>
+            <th>{{author.fullname}}</th>
+            <th>{{author.gender}}</th>
+            <th>{{author.date_of_birthday}}</th>
+            <th>{{author.nationality}}</th>
+            <th>{{author.info}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+    <table border='1'>book_author_with_a
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>author</th>
+            <th>Category</th>
+            <th>price</th>
+            <th>page_count</th>
+        </tr>
+        {% for book in book_author_with_a %}
+        <tr>
+            <th>{{book.id}}</th>
+            <th>{{book.title}}</th>
+            <th>{{book.author.fullname}}</th>
+            <th>{{book.categories}}</th>
+            <th>{{book.price}}</th>
+            <th>{{book.page_count}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+    <table border='1'>Daniel Defo
+        <tr>
+            <th>id</th>
+            <th>Fullname</th>
+            <th>gender</th>
+            <th>date_of_birth</th>
+            <th>nationality</th>
+            <th>info</th>
+        </tr>
+        {% for author in dan_defo %}
+        <tr>
+            <th>{{author.id}}</th>
+            <th>{{author.fullname}}</th>
+            <th>{{author.gender}}</th>
+            <th>{{author.date_of_birthday}}</th>
+            <th>{{author.nationality}}</th>
+            <th>{{author.info}}</th>
+        </tr>
+        {% endfor %}
+        <table border='1'>Not British
+            <tr>
+                <th>id</th>
+                <th>Fullname</th>
+                <th>gender</th>
+                <th>date_of_birth</th>
+                <th>nationality</th>
+                <th>info</th>
+            </tr>
+            {% for author in not_british %}
+            <tr>
+                <th>{{author.id}}</th>
+                <th>{{author.fullname}}</th>
+                <th>{{author.gender}}</th>
+                <th>{{author.date_of_birthday}}</th>
+                <th>{{author.nationality}}</th>
+                <th>{{author.info}}</th>
+            </tr>
+            {% endfor %}
+            <table border='1'>Author startswith D
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>author</th>
+                    <th>Category</th>
+                    <th>price</th>
+                    <th>page_count</th>
+                </tr>
+                {% for book in start_with_D %}
+                <tr>
+                    <th>{{book.id}}</th>
+                    <th>{{book.title}}</th>
+                    <th>{{book.author.fullname}}</th>
+                    <th>{{book.categories}}</th>
+                    <th>{{book.price}}</th>
+                    <th>{{book.page_count}}</th>
+                </tr>
+                {% endfor %}
+                <table border='1'>Male Authors
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>author</th>
+                        <th>Category</th>
+                        <th>price</th>
+                        <th>page_count</th>
+                    </tr>
+                    {% for book in males %}
+                    <tr>
+                        <th>{{book.id}}</th>
+                        <th>{{book.title}}</th>
+                        <th>{{book.author.fullname}}</th>
+                        <th>{{book.categories}}</th>
+                        <th>{{book.price}}</th>
+                        <th>{{book.page_count}}</th>
+                    </tr>
+                    {% endfor %}
+                    <table border='1'>Category endswith e
+                        <tr>
+                            <th>id</th>
+                            <th>title</th>
+                            <th>author</th>
+                            <th>Category</th>
+                            <th>price</th>
+                            <th>page_count</th>
+                        </tr>
+                        {% for book in title_with_e %}
+                        <tr>
+                            <th>{{book.id}}</th>
+                            <th>{{book.title}}</th>
+                            <th>{{book.author.fullname}}</th>
+                            <th>{{book.categories}}</th>
+                            <th>{{book.price}}</th>
+                            <th>{{book.page_count}}</th>
+                        </tr>
+                        {% endfor %}
+                        <table border='1'>pk_three
+                            <tr>
+                                <th>id</th>
+                                <th>title</th>
+                                <th>author</th>
+                                <th>Category</th>
+                                <th>price</th>
+                                <th>page_count</th>
+                            </tr>
+                            {% for book in pk_three %}
+                            <tr>
+                                <th>{{book.id}}</th>
+                                <th>{{book.title}}</th>
+                                <th>{{book.author.fullname}}</th>
+                                <th>{{book.categories}}</th>
+                                <th>{{book.price}}</th>
+                                <th>{{book.page_count}}</th>
+                            </tr>
+                            {% endfor %}
+                            <table border='1'>NOT USED CATEGORIES
+                                <tr>
+                                    <th>Category_title</th>
+                                </tr>
+                                {% for cat in not_related %}
+                                <tr>
+                                    <th>{{cat.title}}</th>
+                                </tr>
+                                {% endfor %}
+                            </table>
+</body>
+
+</html>

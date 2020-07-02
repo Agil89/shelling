@@ -44,6 +44,12 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
+    @property
+    def categories(self):
+        cats = self.category.values_list('title',flat=True)
+        return ','.join(cats)
+
+
 
 class Category(models.Model):
 
