@@ -212,6 +212,63 @@
                                 </tr>
                                 {% endfor %}
                             </table>
+                            <table border='1'>updated_books
+                                <tr>
+                                    <th>id</th>
+                                    <th>title</th>
+                                    <th>author</th>
+                                    <th>Category</th>
+                                    <th>price</th>
+                                    <th>page_count</th>
+                                </tr>
+                                {% for book in updated_books %}
+                                <tr>
+                                    <th>{{book.id}}</th>
+                                    <th>{{book.title}}</th>
+                                    <th>{{book.author.fullname}}</th>
+                                    <th>{{book.categories}}</th>
+                                    <th>{{book.price}}</th>
+                                    <th>{{book.page_count}}</th>
+                                </tr>
+                                {% endfor %}
+                                <table border='1'>updated_female_books
+                                    <tr>
+                                        <th>id</th>
+                                        <th>title</th>
+                                        <th>author</th>
+                                        <th>Category</th>
+                                        <th>price</th>
+                                        <th>page_count</th>
+                                    </tr>
+                                    {% for book in updated_female_books %}
+                                    <tr>
+                                        <th>{{book.id}}</th>
+                                        <th>{{book.title}}</th>
+                                        <th>{{book.author.fullname}}</th>
+                                        <th>{{book.categories}}</th>
+                                        <th>{{book.price}}</th>
+                                        <th>{{book.page_count}}</th>
+                                    </tr>
+                                    {% endfor %}
+                                    <table border='1'>books_after_deleted
+                                        <tr>
+                                            <th>id</th>
+                                            <th>title</th>
+                                            <th>author</th>
+                                            <th>Category</th>
+                                            <th>price</th>
+                                            <th>page_count</th>
+                                        </tr>
+                                        {% for book in books_after_deleted %}
+                                        <tr>
+                                            <th>{{book.id}}</th>
+                                            <th>{{book.title}}</th>
+                                            <th>{{book.author.fullname}}</th>
+                                            <th>{{book.categories}}</th>
+                                            <th>{{book.price}}</th>
+                                            <th>{{book.page_count}}</th>
+                                        </tr>
+                                        {% endfor %}
 </body>
 
 </html>
